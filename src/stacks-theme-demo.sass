@@ -1,0 +1,24 @@
+body
+  &.demo
+    [class*=stack]
+      & > *
+        border-left: 1px solid #888
+        color: #555
+        text-align: center
+
+      & :first-child
+        border-width: 0
+
+    .stack > *
+      background-color: #eee
+    .stack-2 > *
+      background-color: #ddd
+    .stack-3 > *
+      background-color: #ccc
+    .stack-4 > *
+      background-color: #bbb
+    .stack-5 > *
+      background-color: #aaa
+    .stack-6 > *
+      background-color: #999
+

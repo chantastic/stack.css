@@ -1,0 +1,18 @@
+body.demo [class*=stack] > * {
+  border-left: 1px solid #888888;
+  color: #555555;
+  text-align: center; }
+body.demo [class*=stack] :first-child {
+  border-width: 0; }
+body.demo .stack > * {
+  background-color: #eeeeee; }
+body.demo .stack-2 > * {
+  background-color: #dddddd; }
+body.demo .stack-3 > * {
+  background-color: #cccccc; }
+body.demo .stack-4 > * {
+  background-color: #bbbbbb; }
+body.demo .stack-5 > * {
+  background-color: #aaaaaa; }
+body.demo .stack-6 > * {
+  background-color: #999999; }

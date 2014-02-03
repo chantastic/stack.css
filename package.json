@@ -1,0 +1,21 @@
+{
+  "name": "stacks",
+  "version": "0.0.0",
+  "description": "Stacks: Simple Layout blocks for friendly mobile-first development.",
+  "main": "gulpfile.js",
+  "scripts": {},
+  "keywords": [
+    "css",
+    "grid",
+    "mobile",
+    "framework",
+    "styles",
+    "layout"
+  ],
+  "author": "Michael Chan",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-ruby-sass": "~0.3.0"
+  }
+}

@@ -1,0 +1,125 @@
+@mixin breakpoint($point)
+  @if $point == small
+    @media (max-width: 699px)
+      @content
+
+@mixin stack-($divisor: 2)
+  .stack-#{$divisor}
+    $block-width: (100% / $divisor)
+
+    @extend .stack
+
+    // child blocks are now single-block width
+    & > *
+      width: $block-width
+
+    // add width classes
+    @for $width from 2 to $divisor
+      +block-span-variant($divisor, $width)
+
+    // add offset options
+    @for $width from 1 to $divisor
+      +block-offset-variant($divisor, $width)
+
+  .stack-#{$divisor}:not(.stack--hold)
+    & > *
+      @include breakpoint(small)
+        width: 100%
+
+@mixin block-span-variant($divisor, $width)
+  $block-width: (100% / $divisor)
+
+  > .stack__span#{$width}
+    width: ($block-width * $width)
+
+    // default media query
+    @include breakpoint(small)
+      width: 100%
+
+@mixin block-offset-variant($divisor, $width)
+  $block-width: (100% / $divisor)
+
+  &.stack--offset-#{$width},
+  &.stack--inset-#{$width}
+    &:before,
+    &:after
+      content: ""
+      float: left
+      display: block
+      width: ($block-width * $width)
+      height: 1px
+
+*, *:before, *:after
+  // TODO: compass box-sizing
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.stack
+  float: left
+  width: 100%
+  position: relative
+  display: table
+  float: left
+  width: 100%
+
+  & > *
+    float: left
+    display: table-row
+    text-align: center
+    width: 100%
+
++stack-(2)
++stack-(3)
++stack-(4)
++stack-(5)
++stack-(6)
++stack-(7)
++stack-(8)
++stack-(9)
++stack-(10)
++stack-(11)
++stack-(12)
+
+// cutout
+.stack > * ~ .stack--cut
+  color: red
+  display: none
+.stack > * ~ .stack--cut ~ .stack--cut
+  color: green
+
+
+// sass modes:
+//   * ease: *
+//   * performance: div, section, aside, header, footer
+//
+// mixin(psuedo code):
+//  if $mode == 'performance'
+//    selector > div,
+//    selector > section,
+//    selector > aside,
+//    selector > header,
+//    selector > footer {
+//      ...
+//    }
+//  else
+//    selector > * { ... }
+//
+
+
+/* samples */
+  /* .stack--thirds > *.stack--skip { */
+  /*   display: none */
+  /* } */
+  /*  */
+  /*   .stack--thirds > * ~ .stack--skip { */
+  /*     width: 49.99% */
+  /*   } */
+
+
+  /* .stack-5.stack--offset1 { width: 80% } */
+
+  /* .stack-5.stack--offset1 { width:} */
+
+  /* offset */
+  /* .stack--fifths.stack--offset1 { overflow: hidden left: 20% } */
