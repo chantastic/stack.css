@@ -1,0 +1,23 @@
+{
+  "name": "stack.css",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chantastic/stack.css",
+  "authors": [
+    "Michael Chan <mijoch@gmail.com>"
+  ],
+  "description": "grid layout closer to tables",
+  "main": "stack.css",
+  "keywords": [
+    "css",
+    "grid",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
