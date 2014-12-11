@@ -1,0 +1,20 @@
+body.demo [class*=stack] > * {
+  border-left: 1px solid #888;
+  color: #555;
+  text-align: center; }
+body.demo [class*=stack] :first-child {
+  border-width: 0; }
+body.demo .stack > * {
+  background-color: #eee; }
+body.demo .stack-2 > * {
+  background-color: #ddd; }
+body.demo .stack-3 > * {
+  background-color: #ccc; }
+body.demo .stack-4 > * {
+  background-color: #bbb; }
+body.demo .stack-5 > * {
+  background-color: #aaa; }
+body.demo .stack-6 > * {
+  background-color: #999; }
+
+/*# sourceMappingURL=stacks-theme-demo.sass.map */
