@@ -1,12 +1,10 @@
-Stacker
+# WIP
 
-Smart Layouts For Dim Wits
+...but seriously, WIP.
+
+This is a playground for a simpler grid; closer to tables.
 
 ## opinions
-
-#### IE7 is dead
-
-IE7 costs more to support than it's worth.  If you're looking at frameworks like this, thances are that you don't have the team to support IE7 anyway.  Worry about it when the numbers support it.
 
 #### IE8 support is limited to grid only
 
