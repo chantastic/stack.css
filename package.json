@@ -1,6 +1,6 @@
 {
-  "name": "stacks",
-  "version": "0.0.0",
+  "name": "stack.css",
+  "version": "0.0.1",
   "description": "Stacks: Simple Layout blocks for friendly mobile-first development.",
   "main": "gulpfile.js",
   "scripts": {},
